@@ -1,5 +1,4 @@
 #Bloque de manejo de errores en caso de que un dato se ponga mal
-
 try:
     #Se ingresan con inputs la dirección de la imagen y la llave
     path = input(r'Ingresa la dirección de la imagen : ')
@@ -34,6 +33,6 @@ try:
  
  
 except Exception:
-    print('Error caught : ', Exception.__name__)
+    print('Error : ', Exception.__name__)
 
     #Barcelona Geeks (2022, 5 julio). Cifrar y descifrar imágenes usando Python – Barcelona Geeks. https://barcelonageeks.com/encriptar-y-desencriptar-una-imagen-usando-python/
