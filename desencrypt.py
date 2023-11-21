@@ -13,24 +13,24 @@ try:
     # Se lee el archivo
     lecturaImagen = open(path, 'rb')
      
-    # storing image data in variable "image"
+    # Se almacena la imagen en una variable imagen.
     imagen = lecturaImagen.read()
     lecturaImagen.close()
      
-    # converting image into byte array to perform decryption easily on numeric data
+    # La imagen se convierte en un arreglo de bytes para poder desencriptar
     imagen = bytearray(imagen)
  
-    # performing XOR operation on each value of bytearray
+    # A cada valor del arreglo se le hace la operación XOR, este sería nuestro método de desencriptación
     for index, values in enumerate(imagen):
         imagen[index] = values ^ key
  
-    # opening file for writing purpose
+    # Se abre el archivo en forma de escritura
     escrituraImagen = open(path, 'wb')
      
-    # writing decryption data in image
+    # Se escribe la desencriptación en la imagen
     escrituraImagen.write(imagen)
     escrituraImagen.close()
-    print('Decryption Done...')
+    print('Desencriptación terminada...')
  
  
 except Exception:
